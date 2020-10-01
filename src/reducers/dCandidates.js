@@ -1,18 +1,17 @@
 import {ACTION_TYPES}from "../actions/dCandidates";
-const initialstate={
+const initialState={
     list:[]
 }
 
-export const dCandidates =(state=initialstate,action)=>{
+export const dCandidates =(state=initialState,action)=>{
     switch (action.type) {
         case ACTION_TYPES.FETCH_ALL:
             return{
                     ...state,
                     list:[...action.payload]
             }
-            
     
         default:
-            break;
+            return state 
     }
 }

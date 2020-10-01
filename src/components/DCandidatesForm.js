@@ -1,4 +1,4 @@
 const DCandidatesForm =(props)=>{
-    return (<div>form DCandidates</div>)
+    return (<div>form DCandidatesss</div>)
 }
 export default DCandidatesForm;

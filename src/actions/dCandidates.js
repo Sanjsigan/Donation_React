@@ -8,17 +8,17 @@ export const ACTION_TYPES ={
 }
 
 export const fetchAll=() =>dispatch =>{
-    api.dCandidates()
+    api.dCandidates().fetchAll()
     .then(
         response=>{
+            console.log(response);
             dispatch({
                 type:ACTION_TYPES.FETCH_ALL,
-                payload:[]
+                payload:response.data
             })
         
-        }
-    )
-    .catch()
+        })
+    .catch(err=>console.log(err ))
    
     
 }
